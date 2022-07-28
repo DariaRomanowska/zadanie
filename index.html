@@ -4,59 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Strona Glówna</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <header>
       <div class="navigation">
-        <div class="navigation--title">
+        <div class="col-6 navigation--title">
           <img
-            class="header-title-img"
             src="./images/header/title-header.svg"
             alt="Face Vitall"
           />
         </div>
-        <div class="navigation--links">
-          <nav class="navigation--links__a">
-            <a class="header-navigation-1" href="#">O serum</a>
-            <a class="header-navigation-2" href="#">Opinie</a>
-            <a class="header-navigation-3" href="#">Galeria</a>
-            <a class="header-navigation-4" href="#">Kup teraz</a>
-            <a class="header-navigation-5" href="#">FAQ</a>
+        <div class="col-6 navigation--links">
+          <nav>
+            <a href="#">O serum</a>
+            <a href="#">Opinie</a>
+            <a href="#">Galeria</a>
+            <a href="#">Kup teraz</a>
+            <a href="#">FAQ</a>
           </nav>
         </div>
       </div>
     </header>
     <main>
-      <section class="block-1">
-        <div class="section--block__1">
-          <img
-            width="1200"
-            height="600"
-            class="section--block__1-img"
-            src="./images/main/section-1/bottle-of-serum.png"
-            alt="bottle of serum"
-          />
-        </div>
-        <div class="section--block__2">
-          <div class="section--block__2-1">
-            <div class="section--block__title">
-              <img
-                src="images/main/section-1/section-title.svg"
-                alt="Face Vitall"
-              />
-            </div>
-            <h5 class="section--block__subtitle">
-              Innowacyjne serum do twarzy Witamina A + E
-            </h5>
-            <div class="section--block__properties">
-              <p>Ekspresowe odmłodzenie</p>
-              <p class="section--block__properties-2">Niwelacja trądziku</p>
-              <p>Poprawa kolorytu</p>
-            </div>
+      <section class="col-11 about">
+        <div class="col-5 section--about__description">
+          <div class="section--about__title">
+            <img src="images/main/section-1/section-title.svg"
+                 alt="serum"
+            />
           </div>
-          <div class="section--block__3">
-            <p class="section--block__text">
+          <div class="section--about__subtitle">
+          <h5 class="col-10">
+            Innowacyjne serum do twarzy Witamina A + E
+          </h5>
+          </div>
+          <div class="col-10 section--about__properties">
+            <p>Ekspresowe odmłodzenie</p>
+            <p class="section--about__properties-2">Niwelacja trądziku</p>
+            <p>Poprawa kolorytu</p>
+          </div>
+          <div class="col-6 section--about__block">
+            <p class="section--about__text">
               Odmładzające serum do twarzy <b>FaceVitall</b> stworzono z myślą o
               osobach pragnących nie tylko zachować <b>młody wygląd</b>, ale
               także zadbać o <b>zdrowie swojej cery.</b> Produkt zawiera w 100%
@@ -66,7 +56,7 @@
               nie pozostawiając tłustej, nieprzyjemnej warstwy.
             </p>
           </div>
-          <div class="section--block__button">
+          <div class="col-5 section--about__button">
             <a href="#"> 137 zł | Kup teraz </a>
           </div>
         </div>
@@ -126,7 +116,9 @@
       </section>
       <section class="block-3">
         <div class="section--block__reviews">
-          <h3>Miliony zadowolonych kobiet</h3>
+          <div>
+            <h3>Miliony zadowolonych kobiet</h3>
+          </div>
           <div class="section--block__review-row">
             <div class="column section--block__review1">
               <img
@@ -215,7 +207,7 @@
             />
           </div>
           <div class="section--block__form-sell">
-            <div class="container">
+            <form class="container">
               <div class="section--block__form-right">
                 <h3 class="container-block-7-form-title">
                   teraz tylko <span>137 zł</span>!
@@ -228,16 +220,16 @@
                 <input type="text" placeholder="Imię i Nazwisko" /><br />
                 <input type="tel" placeholder="Numer telefonu" /><br />
               </div>
-              <div class="section--block__form-right button" >
+              <div class="section--block__form-right button">
                 <input type="submit" value="Zamów" />
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
     </main>
     <footer>
-        <p>Copyright &#169; 2021</p>
+      <p>Copyright &#169; 2021</p>
     </footer>
   </body>
 </html>

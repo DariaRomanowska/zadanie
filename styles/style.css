@@ -6,40 +6,55 @@
 }
 body {
   width: 100%;
-  height: 100%;
 }
 header {
-  width: 100%;
-  height: 114px;
-  margin: 0 auto;
-  padding-top: 40px;
-  border-bottom: 3px solid #ecd19e;
+width: 100%;
+
   background-color: #ffffff;
 }
-section {
-  margin-bottom: 70px;
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+@media only screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+  .navigation--title{
+    margin-bottom: 16px;
+  }
+  section.about{
+    background-image: unset;
+  }
 }
-.navigation {
+
+  .navigation {
+  width: 100%;
+  border-bottom: 3px solid #ecd19e;
   display: flex;
   align-items: center;
-  justify-content: space-around;
   flex-wrap: wrap;
-  margin: 0 16px;
+  padding: 40px;
 }
 .navigation--title {
-  width: 30%;
+  float: left;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 .navigation--links {
-  width: 44%;
-  display: flex;
-  justify-content: start;
+  float:right;
 }
 nav {
   display: flex;
-  justify-content: space-evenly;
-  width: 510px;
+  justify-content: flex-start;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -48,107 +63,107 @@ nav {
   text-align: center;
   text-transform: uppercase;
   flex-wrap: wrap;
-  margin-right: 20px;
 }
 nav a {
   text-decoration: none;
   color: #1e150f;
-}
-main {
-  width: 100%;
-  height: 80%;
-  background-color: #ffffff;
-}
-.block-1 {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 100px;
-}
-.section--block__1 {
-  width: 55%;
-  height: 100%;
-  object-fit: contain;
-  object-position: top right;
-}
-.section--block__1 img {
-  object-fit: fill;
-  object-position: top right;
+  margin-right: 55px;
 }
 
-.section--block__2 {
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  margin: 50px 0 50px 0;
+nav a:last-child {
+  margin-right: 0;
 }
-.section--block__title {
-  width: 70%;
-}
-.section--block__title img {
+
+main {
   width: 100%;
-  height: 70px;
+  background-color: #ffffff;
 }
-.section--block__subtitle {
-  width: 72%;
+.about {
+  display: flex;
+  justify-content: end;
+  background-image: url('../images/main/section-1/bottle-of-serum.png');
+  background-size: contain;
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: auto;
+}
+
+.section--about__description {
+  float: left;
+  padding-top: 50px;
+
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: space-between;*/
+  /*align-items: flex-start;*/
+}
+.section--about__title {
+  padding-bottom: 15px;
+  float: right;
+}
+.section--about__title img{
+  width: 85%;
+}
+
+.section--about__subtitle h5{
+  position: relative;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 25px;
-  border-bottom: 4px solid #ecd19e;
+  font-size: 21px;
+  line-height: 28px;
+  padding-bottom: 15px;
 }
-.section--block__properties {
-  width: 70%;
+.section--about__subtitle h5:after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  background-color: #e9ca91;
+  transform: translateX(-50%);
+}
+
+
+.section--about__properties {
   display: flex;
   flex-direction: row;
-}
-.section--block__2-1 {
-  height: 30%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.section--block__properties-2 {
-  border-left: 1px solid #000000;
-  border-right: 1px solid #000000;
-}
-.section--block__properties p {
+  /*margin-bottom: 25px;*/
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 13px;
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
+  margin: 0 auto;
+
 }
-.section--block__3 {
-  height: 40%;
-  width: 70%;
+.section--about__properties-2 {
+   border-left: 1px solid #000000;
+   border-right: 1px solid #000000;
+ }
+
+.section--about__block {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
   align-content: center;
   flex-direction: row;
+  margin-bottom: 15px;
+  float: right;
 }
-.section--block__text {
-  width: 72%;
-  height: 100%;
+.section--about__text {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
 }
-.section--block__button {
-  width: 43%;
+.section--about__button {
   margin: 0 20%;
 }
-.section--block__button a {
+.section--about__button a {
   background-color: rgb(30, 21, 15);
   text-transform: uppercase;
   text-decoration: none;
@@ -169,22 +184,18 @@ main {
 
 .block-2 {
   width: 100%;
-  height: 30%;
   margin: 0 auto;
 }
 
 .section--block__description1 {
   width: 70%;
-  height: 100%;
   margin: 0 auto;
 }
 .section--block__description1-title {
-  height: 10vh;
   margin-bottom: 40px;
 }
 .section--block__description1-title h3 {
   width: 100%;
-  height: 100%;
   text-align: center;
   position: relative;
   font-family: "Raleway", sans-serif;
@@ -214,7 +225,6 @@ main {
 }
 .section--block__description2-row {
   width: 80%;
-  height: 100%;
   display: flex;
   align-content: start;
   margin: 0 auto;
@@ -225,7 +235,6 @@ main {
   width: 30%;
 }
 .section--block__description2-title {
-  height: 10vh;
   display: flex;
   font-family: "Raleway", sans-serif;
   font-style: normal;
@@ -242,7 +251,6 @@ main {
 
 .section--block__description2-text {
   display: flex;
-  height: 66%;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -264,14 +272,12 @@ li {
   margin: 0 auto;
 }
 .section--block__review-row {
-  height: 40vh;
   display: flex;
   flex-direction: row;
   margin-bottom: 40px;
 }
 
 .section--block__reviews h3 {
-  height: 10vh;
   text-align: center;
   position: relative;
   font-family: "Raleway", sans-serif;
@@ -299,17 +305,13 @@ li {
   align-items: center;
 }
 .section--block__review1 {
-  height: 100%;
 }
 .section--block__review2 {
-  height: 90%;
 }
 .section--block__review3 {
-  height: 80%;
 }
 
 .section--block__review-text {
-  height: 43%;
   display: flex;
   align-content: start;
   font-family: "Open Sans", sans-serif;
@@ -323,7 +325,7 @@ li {
 }
 
 .section--block__review-name {
-  height: 10%;
+
   display: flex;
   align-content: start;
   font-family: "Open Sans", sans-serif;
@@ -347,7 +349,6 @@ li {
 }
 .block-5 {
   width: 100%;
-  height: 50vh;
   display: flex;
   align-items: center;
   margin-bottom: 40px;
@@ -357,7 +358,6 @@ li {
   background-repeat: no-repeat;
 }
 .section--block__background {
-  height: 80%;
   display: flex;
   width: 50%;
   justify-content: space-evenly;
@@ -391,52 +391,45 @@ li {
   background-color: #464648;
 }
 
-.block-6{
+.block-6 {
   width: 100%;
-  height: 45vh;
 }
-.section--block__form{
+.section--block__form {
   width: 50%;
-  height: 100%;
   margin: 0 auto;
   display: flex;
 }
-.section--block__form-img{
+.section--block__form-img {
   width: 40%;
-  height: 100%;
 }
-.section--block__form-img img{
+.section--block__form-img img {
   width: 100%;
-  height: 100%;
   background-color: #f0ede7;
   object-fit: fill;
   object-position: center;
 }
-.section--block__form-sell{
+.section--block__form-sell {
   width: 60%;
-  height: 100%;
   display: flex;
   justify-content: space-evenly;
   background-color: #1e150f;
   flex-direction: column;
   align-content: center;
 }
-.container{
+.container {
   width: 80%;
-  height: 90%;
   margin: 0 auto;
   display: flex;
   align-content: start;
   flex-direction: column;
   justify-content: space-evenly;
 }
-.section--block__form-right{
+.section--block__form-right {
   width: 100%;
-  height: 30%;
   margin: 0 auto;
 }
 
-.section--block__form-right h3{
+.section--block__form-right h3 {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -448,7 +441,7 @@ li {
 .section--block__form-right span {
   color: #ecd19f;
 }
-.section--block__form-right p{
+.section--block__form-right p {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -456,7 +449,7 @@ li {
   line-height: 20px;
   color: #ffffff;
 }
-.block{
+.block {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -469,23 +462,22 @@ input[type="text"] {
   font-weight: 300;
   font-size: 15px;
   line-height: 29px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   color: #000000;
   padding-left: 10px;
 }
 input[type="tel"] {
-
   border: none;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
   line-height: 29px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   color: #000000;
   padding-left: 10px;
 }
-.button{
+.button {
   display: flex;
   height: 20%;
   align-items: flex-end;
@@ -504,7 +496,6 @@ input[type="submit"] {
 }
 footer {
   width: 100%;
-  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
