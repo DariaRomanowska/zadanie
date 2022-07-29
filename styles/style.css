@@ -8,35 +8,89 @@ body {
   width: 100%;
 }
 header {
-width: 100%;
-
+  width: 100%;
   background-color: #ffffff;
 }
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-@media only screen and (max-width: 768px) {
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+@media only screen and (max-width: 1000px) {
   [class*="col-"] {
     width: 100%;
   }
-  .navigation--title{
+  .navigation--title {
     margin-bottom: 16px;
   }
-  section.about{
+  section.about {
     background-image: unset;
+  }
+  .empty-block {
+    width: 0;
+  }
+  .section--about__description {
+    display: grid;
+    justify-items: start;
+  }
+  .section--reviews__column {
+    display: flex;
+    flex-direction: row;
   }
 }
 
-  .navigation {
+@media only screen and (max-width: 601px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+  section.about {
+    background-image: unset;
+  }
+  .section--about__description {
+    display: grid;
+    justify-items: start;
+  }
+  .empty-block {
+    width: 0;
+  }
+  .section--reviews__column {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.navigation {
   width: 100%;
   border-bottom: 3px solid #ecd19e;
   display: flex;
@@ -50,7 +104,7 @@ width: 100%;
   justify-content: center;
 }
 .navigation--links {
-  float:right;
+  float: right;
 }
 nav {
   display: flex;
@@ -75,47 +129,38 @@ nav a:last-child {
 }
 
 main {
+  display: grid;
+  row-gap: 50px;
   width: 100%;
   background-color: #ffffff;
 }
 .about {
   display: flex;
-  justify-content: end;
-  background-image: url('../images/main/section-1/bottle-of-serum.png');
-  background-size: contain;
+  justify-content: start;
+  background-image: url("../images/main/section-1/bottle-of-serum.png");
   background-position: left top;
   background-repeat: no-repeat;
-  height: auto;
+  background-size: contain;
 }
 
 .section--about__description {
-  float: left;
+  display: grid;
+  justify-items: end;
+  row-gap: 25px;
   padding-top: 50px;
-
-  /*display: flex;*/
-  /*flex-direction: column;*/
-  /*justify-content: space-between;*/
-  /*align-items: flex-start;*/
-}
-.section--about__title {
-  padding-bottom: 15px;
-  float: right;
-}
-.section--about__title img{
-  width: 85%;
 }
 
-.section--about__subtitle h5{
+.section--about__subtitle h5 {
   position: relative;
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 23px;
   line-height: 28px;
   padding-bottom: 15px;
 }
-.section--about__subtitle h5:after{
-  content: '';
+.section--about__subtitle h5::after {
+  content: "";
   position: absolute;
   left: 50%;
   width: 100%;
@@ -125,11 +170,10 @@ main {
   transform: translateX(-50%);
 }
 
-
 .section--about__properties {
+  width: 70%;
   display: flex;
   flex-direction: row;
-  /*margin-bottom: 25px;*/
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 13px;
@@ -137,22 +181,12 @@ main {
   text-align: center;
   text-transform: uppercase;
   margin: 0 auto;
-
 }
 .section--about__properties-2 {
-   border-left: 1px solid #000000;
-   border-right: 1px solid #000000;
- }
-
-.section--about__block {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  align-content: center;
-  flex-direction: row;
-  margin-bottom: 15px;
-  float: right;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
 }
+
 .section--about__text {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
@@ -160,9 +194,7 @@ main {
   font-size: 14px;
   line-height: 22px;
 }
-.section--about__button {
-  margin: 0 20%;
-}
+
 .section--about__button a {
   background-color: rgb(30, 21, 15);
   text-transform: uppercase;
@@ -175,27 +207,25 @@ main {
   font-weight: 800;
   line-height: 50px;
   color: rgb(255, 255, 255);
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s;
 }
 
-.section--block__button a:hover {
-  background-color: #222;
+.section--about__button a:hover {
+  background-color: #cecece;
 }
 
-.block-2 {
-  width: 100%;
+.specification {
   margin: 0 auto;
 }
 
-.section--block__description1 {
+.section--specification {
   width: 70%;
   margin: 0 auto;
 }
-.section--block__description1-title {
+.section--specification__title {
   margin-bottom: 40px;
 }
-.section--block__description1-title h3 {
-  width: 100%;
+.section--specification__title h3 {
   text-align: center;
   position: relative;
   font-family: "Raleway", sans-serif;
@@ -204,7 +234,7 @@ main {
   font-size: 60px;
   line-height: 70px;
 }
-.section--block__description1-title h3::after {
+.section--specification__title h3::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -214,28 +244,28 @@ main {
   background-color: #e9ca91;
   transform: translateX(-50%);
 }
-.section--block__description1-text {
+.section--specification__text {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 19px;
   text-align: center;
   margin-bottom: 40px;
 }
-.section--block__description2-row {
-  width: 80%;
+div.section--specification__row {
   display: flex;
-  align-content: start;
-  margin: 0 auto;
+  justify-content: space-around;
   flex-direction: row;
-  justify-content: space-between;
+  margin: 0 auto;
+  height: 20rem;
 }
-.section--block__description2 {
+.section--specification__column {
   width: 30%;
+  height: 250px;
 }
-.section--block__description2-title {
-  display: flex;
+
+.section--specification__column-title {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -244,40 +274,46 @@ main {
   text-align: center;
   color: #ffffff;
   background-color: #1e150f;
-  align-items: center;
-  justify-content: center;
   padding: 10px;
 }
 
-.section--block__description2-text {
+.section--specification__column-text {
+  height: 100%;
   display: flex;
+  align-items: center;
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 22px;
   text-align: center;
   border-left: 3px solid #e9ca91;
   border-bottom: 3px solid #e9ca91;
   border-right: 3px solid #e9ca91;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-li {
-  list-style-position: inside;
-}
-.block-3 {
-  width: 66%;
-  margin: 0 auto;
-}
-.section--block__review-row {
-  display: flex;
-  flex-direction: row;
+  padding-left: 5px;
+  padding-right: 5px;
   margin-bottom: 40px;
 }
 
-.section--block__reviews h3 {
+li {
+  list-style-position: inside;
+}
+.reviews {
+  margin: 0 auto;
+}
+.section--reviews {
+  display: flex;
+  flex-direction: column;
+}
+.section--reviews__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+.section--reviews__title h3 {
   text-align: center;
   position: relative;
   font-family: "Raleway", sans-serif;
@@ -287,7 +323,7 @@ li {
   line-height: 70px;
   margin-bottom: 40px;
 }
-.section--block__reviews h3::after {
+.section--reviews__title h3::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -296,19 +332,6 @@ li {
   bottom: 0;
   background-color: #e9ca91;
   transform: translateX(-50%);
-}
-.column {
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-}
-.section--block__review1 {
-}
-.section--block__review2 {
-}
-.section--block__review3 {
 }
 
 .section--block__review-text {
@@ -323,18 +346,11 @@ li {
   color: #000000;
   align-items: center;
 }
-
-.section--block__review-name {
-
-  display: flex;
-  align-content: start;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  text-align: center;
-  color: #000000;
+.section--reviews__column {
+  width: 15%;
+  display: grid;
+  justify-items: center;
+  row-gap: 15px;
 }
 
 .block-4 {
@@ -344,27 +360,29 @@ li {
   justify-content: space-between;
   margin: 0 auto;
 }
-.block-4 img {
-  width: 80%;
-}
-.block-5 {
-  width: 100%;
+.gallery {
   display: flex;
-  align-items: center;
-  margin-bottom: 40px;
+  flex-direction: row;
+
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.background {
+  height: 20rem;
+  display: grid;
   background-image: url("../images/main/section-5/background.png");
   background-size: cover;
   border: none;
   background-repeat: no-repeat;
 }
-.section--block__background {
+.section--background {
   display: flex;
-  width: 50%;
   justify-content: space-evenly;
   flex-direction: column;
   margin: 0 auto;
 }
-.section--block__background p {
+.section--background__text p {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -374,9 +392,8 @@ li {
   text-align: left;
 }
 
-.section--block__background-button a {
+.section--background__button a {
   text-transform: uppercase;
-  width: 45%;
   text-decoration: none;
   line-height: 50px;
   display: block;
@@ -391,25 +408,17 @@ li {
   background-color: #464648;
 }
 
-.block-6 {
-  width: 100%;
-}
-.section--block__form {
-  width: 50%;
-  margin: 0 auto;
+.section--form {
   display: flex;
+  justify-content: center;
 }
-.section--block__form-img {
-  width: 40%;
-}
-.section--block__form-img img {
-  width: 100%;
+
+.section--form__img img {
   background-color: #f0ede7;
   object-fit: fill;
   object-position: center;
 }
-.section--block__form-sell {
-  width: 60%;
+.section--form__sell {
   display: flex;
   justify-content: space-evenly;
   background-color: #1e150f;
@@ -417,39 +426,35 @@ li {
   align-content: center;
 }
 .container {
-  width: 80%;
+  height: 70%;
   margin: 0 auto;
-  display: flex;
-  align-content: start;
-  flex-direction: column;
-  justify-content: space-evenly;
+  display: grid;
+  align-items: center;
 }
-.section--block__form-right {
-  width: 100%;
-  margin: 0 auto;
+.section--form__right {
 }
 
-.section--block__form-right h3 {
+.section--form__right h3 {
   font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 33px;
-  line-height: 40px;
+  font-size: 46px;
+  line-height: 54px;
   color: #f9f6f0;
   text-transform: uppercase;
 }
-.section--block__form-right span {
+.section--form__right span {
   color: #ecd19f;
 }
-.section--block__form-right p {
+.section--form__right p {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 28px;
+  line-height: 38px;
   color: #ffffff;
 }
-.block {
+.section--form__block {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -460,7 +465,7 @@ input[type="text"] {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 25px;
   line-height: 29px;
   background-color: #c4c4c4;
   color: #000000;
@@ -471,13 +476,13 @@ input[type="tel"] {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 25px;
   line-height: 29px;
   background-color: #c4c4c4;
   color: #000000;
   padding-left: 10px;
 }
-.button {
+.section--form__button {
   display: flex;
   height: 20%;
   align-items: flex-end;
@@ -495,7 +500,7 @@ input[type="submit"] {
   background-color: #e9ca91;
 }
 footer {
-  width: 100%;
+  margin-top: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
