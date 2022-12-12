@@ -1,0 +1,23 @@
+{
+  "devDependencies": {
+    "prettier": "2.7.1"
+  },
+  "name": "zadanie",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DariaRomanowska/zadanie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DariaRomanowska/zadanie/issues"
+  },
+  "homepage": "https://github.com/DariaRomanowska/zadanie#readme"
+}
